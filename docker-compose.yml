@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  client:
+    restart: always
+    build:
+      context: ./client/
+    volumes:
+      - ./client:/var/app/client
+    ports:
+      - 3103:3000
+  server:
+    restart: always
+    build:
+      context: ./server/
+    volumes:
+      - ./server:/var/app/backend
+    ports:
+      - 4000:5000

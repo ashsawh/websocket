@@ -1,0 +1,51 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: parking-server
+spec:
+  selector:
+    matchLabels:
+      app: parking-server
+      tier: backend
+      track: stable
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: parking-server
+        tier: backend
+        track: stable
+    spec:
+      containers:
+        - name: parking-server
+          image: websockets/server
+          imagePullPolicy: Never
+          ports:
+            - name: http
+              containerPort: 4000
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: parking-client
+spec:
+  selector:
+    matchLabels:
+      app: parking-client
+      tier: frontend
+      track: stable
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: parking-client
+        tier: frontend
+        track: stable
+    spec:
+      containers:
+        - name: parking-client
+          image: websockets/client
+          imagePullPolicy: Never
+          ports:
+            - name: http
+              containerPort: 3111

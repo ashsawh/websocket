@@ -1,0 +1,39 @@
+{
+  "name": "websocket",
+  "version": "1.0.0",
+  "description": "Sample project to explore websockets again",
+  "scripts": {
+    "start": "parcel dist/app.js --out-dir=tmp",
+    "ws": "webpack ./src/server.ts --out-dir=dist --public-url='./'",
+    "build": "parcel build ./src/app.ts --out-dir=dist --public-url='./'",
+    "watch": "parcel watch ./src/** --out-dir=dist"
+  },
+  "keywords": [],
+  "author": "",
+  "dependencies": {
+    "@types/socket.io": "^2.1.2",
+    "babel-polyfill": "^6.26.0",
+    "bufferutil": "^4.0.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "net": "^1.0.2",
+    "socket.io": "^2.2.0",
+    "ts-loader": "^6.0.4",
+    "utf-8-validate": "^5.0.2",
+    "uws": "^100.0.1",
+    "ws": "^7.1.2"
+  },
+  "devDependencies": {
+    "@types/cors": "*",
+    "@types/express": "*",
+    "@types/ws": "*",
+    "autoprefixer": "^9.6.1",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "parcel-bundler": "^1.12.3",
+    "postcss-modules": "^1.4.1",
+    "typescript": "^3.5.3",
+    "webpack": "*",
+    "webpack-cli": "^3.3.7"
+  }
+}

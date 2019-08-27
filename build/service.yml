@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: parking-server
+spec:
+  selector:
+    app: parking-server
+  ports:
+    - protocol: TCP
+      port: 4000
+      targetPort: http
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: parking-client
+spec:
+  selector:
+    app: parking
+    tier: frontend
+  ports:
+    - protocol: "TCP"
+      port: 3103
+      targetPort: 3000
+  type: LoadBalancer

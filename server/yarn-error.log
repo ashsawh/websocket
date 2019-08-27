@@ -1,0 +1,60 @@
+Arguments: 
+  /usr/local/bin/node /opt/yarn-v1.16.0/bin/yarn.js install
+
+PATH: 
+  /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+Yarn version: 
+  1.16.0
+
+Node version: 
+  12.5.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  SyntaxError: /var/app/backend/package.json: Unexpected token } in JSON at position 551
+      at JSON.parse (<anonymous>)
+      at /opt/yarn-v1.16.0/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/opt/yarn-v1.16.0/lib/cli.js:304:30)
+      at /opt/yarn-v1.16.0/lib/cli.js:315:13
+
+npm manifest: 
+  {
+    "name": "websocket",
+    "version": "1.0.0",
+    "description": "Sample project to explore websockets again",
+    "scripts": {
+      "start": "parcel dist/app.js --out-dir=tmp",
+      "ws": "parcel build ./src/server.ts --out-dir=dist --public-url='./'",
+      "build": "parcel build ./src/app.ts --out-dir=dist --public-url='./'",
+      "watch": "parcel watch ./src/** --out-dir=dist"
+    },
+    "keywords": [],
+    "author": "",
+    "dependencies": {
+      "@types/socket.io": "^2.1.2",
+      "babel-polyfill": "^6.26.0",
+      "express": "*",
+      "socket.io": "^2.2.0",
+    },
+    "devDependencies": {
+      "@types/express": "*",
+      "@types/ws": "*",
+      "autoprefixer": "^9.6.1",
+      "babel-core": "^6.26.3",
+      "babel-preset-env": "^1.7.0",
+      "parcel-bundler": "^1.12.3",
+      "postcss-modules": "^1.4.1",
+      "typescript": "^3.5.3",
+      "webpack": "*"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

@@ -1,0 +1,10 @@
+.cell {
+    margin: 5px;
+    width:100px;
+    display: inline-block;
+    border: 1px solid grey;
+}
+
+.App-header {
+    margin-bottom: 20px;
+}
