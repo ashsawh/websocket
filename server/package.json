@@ -21,7 +21,7 @@
     "ts-loader": "^6.0.4",
     "utf-8-validate": "^5.0.2",
     "uws": "^100.0.1",
-    "ws": "^7.1.2"
+    "ws": "^7.4.6"
   },
   "devDependencies": {
     "@types/cors": "*",
